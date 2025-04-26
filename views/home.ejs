@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <!-- Header with Home and Login/Signup or Hello, username -->
+    <header>
+        <div style="float: left;">Home</div>
+        <div style="float: right;">
+            <% if (loggedIn) { %> 
+                <p>Hello, <%= username %></p>  <!-- Username will show if logged in -->
+                <a href="/logout">Logout</a>  <!-- Logout option -->
+            <% } else { %>
+                <a href="/login">Login</a>   <!-- Login button if not logged in -->
+                <a href="/signup">Signup</a> <!-- Signup button if not logged in -->
+            <% } %>
+        </div>
+    </header>
+
+    <div>
+        <p>Welcome to the home page!</p>  <!-- Content for home page -->
+    </div>
+</body>
+</html>
